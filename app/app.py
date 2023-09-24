@@ -73,9 +73,9 @@ crop_recommendation_model = pickle.load(
 
 #Loading water Detection Model
 
-leakage_detection_path ='models/model.pkl'
+"""leakage_detection_path ='models/model.pkl'
 detection_model = pickle.load(
-    open(leakage_detection_path,'rb'))
+    open(leakage_detection_path,'rb'))"""
 # =========================================================================================
 
 # Custom functions for calculations
@@ -158,10 +158,11 @@ def fertilizer_recommendation():
     return render_template('fertilizer.html', title=title)
 
 # render disease prediction input page
+"""
 @ app.route('/water-leakage-detection')
 def leakage_detection():
     title = 'Drip Irrigation System - Water Leakage Detection'
-    return render_template('water-leakage-detection.html', title=title)
+    return render_template('water-leakage-detection.html', title=title)"""
 
 
 # ===============================================================================================
@@ -197,7 +198,8 @@ def crop_prediction():
 
             return render_template('try_again.html', title=title)
         
-@app.route('/water-leakage-prediction',methods=['POST'])
+        
+"""@app.route('/water-leakage-prediction',methods=['POST'])
 def detect_leakage():
     title = 'Drip Irrigation System - Water Leakage Detection'
     
@@ -221,7 +223,7 @@ def detect_leakage():
                 answer=answer+i+"\n"
         return render_template('water-leakage-prediction.html', prediction=answer, title=title)
     else:
-        return render_template('try_again.html', title=title)
+        return render_template('try_again.html', title=title)"""
 
 # render fertilizer recommendation result page
 
