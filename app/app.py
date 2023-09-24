@@ -71,11 +71,7 @@ crop_recommendation_model_path = 'models/RandomForest.pkl'
 crop_recommendation_model = pickle.load(
     open(crop_recommendation_model_path, 'rb'))
 
-#Loading water Detection Model
 
-"""leakage_detection_path ='models/model.pkl'
-detection_model = pickle.load(
-    open(leakage_detection_path,'rb'))"""
 # =========================================================================================
 
 # Custom functions for calculations
@@ -158,11 +154,8 @@ def fertilizer_recommendation():
     return render_template('fertilizer.html', title=title)
 
 # render disease prediction input page
-"""
-@ app.route('/water-leakage-detection')
-def leakage_detection():
-    title = 'Drip Irrigation System - Water Leakage Detection'
-    return render_template('water-leakage-detection.html', title=title)"""
+
+
 
 
 # ===============================================================================================
@@ -197,33 +190,6 @@ def crop_prediction():
         else:
 
             return render_template('try_again.html', title=title)
-        
-        
-"""@app.route('/water-leakage-prediction',methods=['POST'])
-def detect_leakage():
-    title = 'Drip Irrigation System - Water Leakage Detection'
-    
-    if request.method == 'POST':
-        final_prediction=[]
-        array_values = request.form.get["pressure"]
-        data = array_values
-        prediction = detection_model.predict(data)
-        for i in prediction:
-            if(i<0.09):
-                i=0
-            else:
-                final_prediction.append(prediction.index(i))
-            round(i,7)
-        size=len(final_prediction)
-        if(size==0):
-            answer= "Congratulations, there is no leak suspected in your system ."
-        else:
-            answer= "There is Leak Suspected in Following Pipes : \n"
-            for i in final_prediction():
-                answer=answer+i+"\n"
-        return render_template('water-leakage-prediction.html', prediction=answer, title=title)
-    else:
-        return render_template('try_again.html', title=title)"""
 
 # render fertilizer recommendation result page
 

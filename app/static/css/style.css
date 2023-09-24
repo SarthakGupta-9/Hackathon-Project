@@ -1,4 +1,9 @@
-
+.mynav{
+	background-color:#947400;
+}
+.mylinks{
+	color:white;
+}
   .right{
 	position: absolute;
     left: 60%;
@@ -181,7 +186,6 @@
 
 .container a {
     text-decoration: none;
-    color: #414141;
 }
 
 
@@ -598,7 +602,7 @@ li > a:only-child:after { content: ''; }
 }
 
 .banner-top {
-    background: url(../images/3.jpg) no-repeat center;
+    background: url(../images/crop_background.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -635,6 +639,7 @@ li > a:only-child:after { content: ''; }
 
 .w3layouts-banner-info {
     padding-top: 16em;
+	margin-left: 110px;
 }
 
 .w3layouts-banner-info h3 {
@@ -910,7 +915,7 @@ p.footer-para {
 }
 
 .logo2 a {
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 600;
     color: #fff;
     letter-spacing: 1px;
